@@ -1,0 +1,66 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+VCNL4040	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+VCNL4040	KEYWORD2
+begin	KEYWORD2
+isConnected	KEYWORD2
+setIRDutyCycle	KEYWORD2
+setProxInterruptPersistance	KEYWORD2
+setAmbientInterruptPersistance	KEYWORD2
+setProxIntegrationTime	KEYWORD2
+setAmbientIntegrationTime	KEYWORD2
+powerOnProximity	KEYWORD2
+powerOffProximity	KEYWORD2
+powerOnAmbient	KEYWORD2
+powerOffAmbient	KEYWORD2
+setProxResolution	KEYWORD2
+enableAmbientInterrupts	KEYWORD2
+disableAmbientInterrupts	KEYWORD2
+enableSmartPersistance	KEYWORD2
+disableSmartPersistance	KEYWORD2
+enableActiveForceMode	KEYWORD2
+disableActiveForceMode	KEYWORD2
+takeSingleProxMeasurement	KEYWORD2
+enableWhiteChannel	KEYWORD2
+disableWhiteChannel	KEYWORD2
+enableProxLogicMode	KEYWORD2
+disableProxLogicMode	KEYWORD2
+setLEDCurrent	KEYWORD2
+setProxCancellation	KEYWORD2
+setALSHighThreshold	KEYWORD2
+setALSLowThreshold	KEYWORD2
+setProxHighThreshold	KEYWORD2
+setProxLowThreshold	KEYWORD2
+getProximity	KEYWORD2
+getAmbient	KEYWORD2
+getWhite	KEYWORD2
+getID	KEYWORD2
+setProxInterruptType	KEYWORD2
+isClose	KEYWORD2
+isAway	KEYWORD2
+isLight	KEYWORD2
+isDark	KEYWORD2
+readCommand	KEYWORD2
+readCommandLower	KEYWORD2
+readCommandUpper	KEYWORD2
+writeCommand	KEYWORD2
+writeCommandLower	KEYWORD2
+writeCommandUpper	KEYWORD2
+bitMask	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+SPARKFUN_VCNL4040_ARDUINO_LIBRARY_H	LITERAL1
