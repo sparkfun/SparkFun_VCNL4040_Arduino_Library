@@ -2,12 +2,15 @@
   This is a library written for the VCNL4040 distance sensor.
   By Nathan Seidle @ SparkFun Electronics, April 17th, 2018
 
-  The VCNL4040 is a simple IR presence and and ambient light sensor.
-  You can detect objects qualitatively up to 20cm away. This means you can
-  detect if something is there, and if it is closer or further away since the
-  last reading, but it's difficult to say it is 7.2cm away. If you need
-  quantitative distance readings (for example sensing that an object is 177mm away)
-  check out the SparkFun Time of Flight (ToF) sensors with mm accuracy.
+  The VCNL4040 is a simple IR presence and ambient light sensor. This 
+  sensor is excellent for detecting if something has appeared in front 
+  of the sensor. We often see this type of sensor on automatic towel 
+  dispensers, automatic faucets, etc. You can detect objects qualitatively 
+  up to 20cm away. This means you can detect if something is there, 
+  and if it is closer or further away since the last reading, but it's 
+  difficult to say it is 7.2cm away. If you need quantitative distance 
+  readings (for example sensing that an object is 177mm away) check out 
+  the SparkFun Time of Flight (ToF) sensors with mm accuracy.
 
   This library offers the full range of settings for the VCNL4040. Checkout
   the various examples provided with the library but also please give the datasheet
