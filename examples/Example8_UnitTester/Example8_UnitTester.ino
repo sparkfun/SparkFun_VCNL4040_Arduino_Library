@@ -5,7 +5,7 @@
   Date: April 17th, 2018
   License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware License).
 
-  This example outputs the IR Proximity Value from the VCNL4040 sensor.
+  This example is used to quickly test production units
 
   Hardware Connections:
   Attach the Qwiic Shield to your Arduino/Photon/ESP32 or other
@@ -26,21 +26,24 @@ void setup()
 
   Wire.begin(); //Join i2c bus
 
-  if (proximitySensor.begin() == false)
-  {
-    Serial.println("Device not found. Please check wiring.");
-    while (1); //Freeze!
-  }
+  proximitySensor.begin(); //Setup the Wire port
 }
 
 void loop()
 {
-  //Get proximity value. The value ranges from 0 to 65535
-  //so we need an unsigned integer or a long.
-  unsigned int proxValue = proximitySensor.getProximity(); 
-
-  Serial.print("Proximity Value: ");
-  Serial.print(proxValue);
+  if(proximitySensor.isConnected())
+  {
+    proximitySensor.powerOnProximity(); //Turn on prox sensing
+    
+    unsigned int proxValue = proximitySensor.getProximity(); 
+  
+    Serial.print("Good - Proximity Value: ");
+    Serial.print(proxValue);
+  }
+  else
+  {
+    Serial.print("Not connected");
+  }
   Serial.println();
 
   delay(10);

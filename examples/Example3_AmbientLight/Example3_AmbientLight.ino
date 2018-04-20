@@ -5,7 +5,10 @@
   Date: April 17th, 2018
   License: This code is public domain but you buy me a beer if you use this and we meet someday (Beerware License).
 
-  This example outputs the IR Proximity Value from the VCNL4040 sensor.
+  This example outputs ambient light readings to the terminal. 
+  
+  Point the sensor up and start the sketch. Then cover the sensor with your hand.
+  The readings decrease in value because there is less light detected.
 
   Hardware Connections:
   Attach the Qwiic Shield to your Arduino/Photon/ESP32 or other
@@ -19,6 +22,10 @@
 #include "SparkFun_VCNL4040_Arduino_Library.h"
 VCNL4040 proximitySensor;
 
+long startingProxValue = 0;
+long deltaNeeded = 0;
+boolean nothingThere = false;
+
 void setup()
 {
   Serial.begin(9600);
@@ -26,22 +33,19 @@ void setup()
 
   Wire.begin(); //Join i2c bus
 
-  if (proximitySensor.begin() == false)
-  {
-    Serial.println("Device not found. Please check wiring.");
-    while (1); //Freeze!
-  }
+  proximitySensor.begin(); //Initialize the sensor
+
+  proximitySensor.powerOffProximity(); //Power down the proximity portion of the sensor
+  
+  proximitySensor.powerOnAmbient(); //Power up the ambient sensor
 }
 
 void loop()
 {
-  //Get proximity value. The value ranges from 0 to 65535
-  //so we need an unsigned integer or a long.
-  unsigned int proxValue = proximitySensor.getProximity(); 
+  unsigned int ambientValue = proximitySensor.getAmbient(); 
 
-  Serial.print("Proximity Value: ");
-  Serial.print(proxValue);
-  Serial.println();
+  Serial.print("Ambient light level: ");
+  Serial.println(ambientValue);
 
   delay(10);
 }

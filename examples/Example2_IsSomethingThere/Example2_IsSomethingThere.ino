@@ -18,52 +18,56 @@
 
 #include <Wire.h>
 
+//Click here to get the library: http://librarymanager/All#SparkFun_VCNL4040_Arduino_Library
 #include "SparkFun_VCNL4040_Arduino_Library.h"
-VCNL4040 distanceSensor;
+VCNL4040 proximitySensor;
 
 long startingProxValue = 0;
+long deltaNeeded = 0;
 boolean nothingThere = false;
-// http://librarymanager/All#SparkFun_Simultaneous_RFID_Tag_Reader_Library
 
 void setup()
 {
   Serial.begin(9600);
-  Serial.println("Hello, world!");
+  Serial.println("SparkFun VCNL4040 Example");
 
   Wire.begin(); //Join i2c bus
 
-  if (distanceSensor.begin() == false)
+  if (proximitySensor.begin() == false)
   {
     Serial.println("Device not found. Please check wiring.");
     while (1); //Freeze!
   }
 
   //Set the current used to drive the IR LED - 50mA to 200mA is allowed.
-  distanceSensor.setLEDCurrent(200); //For this example, let's do max.
+  proximitySensor.setLEDCurrent(200); //For this example, let's do max.
 
   //The sensor will average readings together by default 8 times.
   //Reduce this to one so we can take readings as fast as possible
-  distanceSensor.setProxIntegrationTime(8); //1 to 8 is valid
+  proximitySensor.setProxIntegrationTime(8); //1 to 8 is valid
 
   //Take 8 readings and average them
   for(byte x = 0 ; x < 8 ; x++)
   {
-    startingProxValue += distanceSensor.getProximity();
+    startingProxValue += proximitySensor.getProximity();
   }
   startingProxValue /= 8;
+
+  deltaNeeded = (float)startingProxValue * 0.05; //Look for 5% change
+  if(deltaNeeded < 5) deltaNeeded = 5; //Set a minimum
 }
 
 void loop()
 {
-  unsigned int proxValue = distanceSensor.getProximity(); 
+  unsigned int proxValue = proximitySensor.getProximity(); 
 
   Serial.print("Prox: ");
   Serial.print(proxValue);
   Serial.print(" ");
 
-  //Let's only trigger if we detect a 100 value change from the starting value
+  //Let's only trigger if we detect a 5% change from the starting value
   //Otherwise, values at the edge of the read range can cause false triggers
-  if(proxValue > (startingProxValue + 100))
+  if(proxValue > (startingProxValue + deltaNeeded))
   {
     Serial.print("Something is there!");
     nothingThere = false;
