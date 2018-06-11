@@ -22,7 +22,7 @@
 
 #include <Wire.h>
 
-//Click here to get the library: http://librarymanager/All#SparkFun_VCNL4040_Arduino_Library
+//Click here to get the library: http://librarymanager/All#SparkFun_VCNL4040
 #include "SparkFun_VCNL4040_Arduino_Library.h"
 VCNL4040 proximitySensor;
 
