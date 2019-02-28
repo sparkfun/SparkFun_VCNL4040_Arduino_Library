@@ -20,7 +20,7 @@ Documentation
 
 * **[Installing an Arduino Library Guide](https://learn.sparkfun.com/tutorials/installing-an-arduino-library)** - Basic information on how to install an Arduino library.
 * **[Product Repository](https://github.com/sparkfun/Qwiic_Proximity_Sensor)** - Main repository (including hardware files)
-* **[Hookup Huide](https://learn.sparkfun.com/tutorials/qwiic-proximity-sensor-vcnl4040-hookup-guide)** - Hookup guide for getting started with the SparkFun VCNL4040 Proximity Sensor.
+* **[Hookup Guide](https://learn.sparkfun.com/tutorials/qwiic-proximity-sensor-vcnl4040-hookup-guide)** - Hookup guide for getting started with the SparkFun VCNL4040 Proximity Sensor.
 
 License Information
 -------------------
