@@ -1,9 +1,9 @@
 SparkFun VCNL4040 Proximity Sensor Library
 ===========================================================
 
-![SparkFun Proximity Sensor (Qwiic) - VCNL4040](https://cdn.sparkfun.com//assets/parts/1/2/8/9/5/14690-Qwiic_Distance_20cm__Qwiic__-_VCNL4040-01.jpg)
+![SparkFun Proximity Sensor (Qwiic) - VCNL4040](https://cdn.sparkfun.com/assets/parts/1/3/5/9/2/15177-SparkFun_Proximity_Sensor_Breakout_-_20cm__VCNL4040__Qwiic_-01.jpg)
 
-[*SparkX Proximity Sensor (Qwiic) - VCNL4040 (SPX-14690)*](https://www.sparkfun.com/products/14690)
+[*SparkFun Proximity Sensor Breakout - 20cm, VCNL4040 (Qwiic) (SEN-15177)*](https://www.sparkfun.com/products/15177)
 
 The VCNL4040 is a simple IR presence and ambient light sensor. This sensor is excellent for detecting if something has appeared in front of the sensor. We often see this type of sensor on automatic towel dispensers, automatic faucets, etc. You can detect objects qualitatively up to 20cm away. This means you can detect if something is there, and if it is closer or further away since the last reading, but it's difficult to say it is 7.2cm away. If you need quantitative distance readings (for example sensing that an object is 177mm away) check out the SparkFun Time of Flight (ToF) sensors with mm accuracy.
   
@@ -20,6 +20,7 @@ Documentation
 
 * **[Installing an Arduino Library Guide](https://learn.sparkfun.com/tutorials/installing-an-arduino-library)** - Basic information on how to install an Arduino library.
 * **[Product Repository](https://github.com/sparkfun/Qwiic_Proximity_Sensor)** - Main repository (including hardware files)
+* **[Hookup Huide](https://learn.sparkfun.com/tutorials/qwiic-proximity-sensor-vcnl4040-hookup-guide)** - Hookup guide for getting started with the SparkFun VCNL4040 Proximity Sensor.
 
 License Information
 -------------------
