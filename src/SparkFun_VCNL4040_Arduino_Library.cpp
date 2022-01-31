@@ -236,7 +236,7 @@ void VCNL4040::enableWhiteChannel(void)
 }
 void VCNL4040::disableWhiteChannel(void)
 {
-  bitMask(VCNL4040_PS_MS, UPPER, VCNL4040_WHITE_EN_MASK, VCNL4040_WHITE_ENABLE);
+  bitMask(VCNL4040_PS_MS, UPPER, VCNL4040_WHITE_EN_MASK, VCNL4040_WHITE_DISABLE);
 }
 
 //Enable the proximity detection logic output mode
