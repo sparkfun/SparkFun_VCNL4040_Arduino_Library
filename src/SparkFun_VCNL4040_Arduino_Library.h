@@ -93,7 +93,7 @@ static const uint8_t VCNL4040_PS_INT_BOTH = (1 << 1) | (1 << 0);
 
 static const uint8_t VCNL4040_PS_SMART_PERS_MASK = (uint8_t)~((1 << 4));
 static const uint8_t VCNL4040_PS_SMART_PERS_DISABLE = 0;
-static const uint8_t VCNL4040_PS_SMART_PERS_ENABLE = (1 << 1);
+static const uint8_t VCNL4040_PS_SMART_PERS_ENABLE = (1 << 4);
 
 static const uint8_t VCNL4040_PS_AF_MASK = (uint8_t)~((1 << 3));
 static const uint8_t VCNL4040_PS_AF_DISABLE = 0;
