@@ -35,6 +35,8 @@
 #include "WProgram.h"
 #endif
 
+#include <Wire.h>
+
 static const uint8_t VCNL4040_ALS_IT_MASK = (uint8_t)~((1 << 7) | (1 << 6));
 static const uint8_t VCNL4040_ALS_IT_80MS = 0;
 static const uint8_t VCNL4040_ALS_IT_160MS = (1 << 7);
