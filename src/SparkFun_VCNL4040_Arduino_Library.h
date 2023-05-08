@@ -99,7 +99,7 @@ static const uint8_t VCNL4040_PS_AF_MASK = (uint8_t)~((1 << 3));
 static const uint8_t VCNL4040_PS_AF_DISABLE = 0;
 static const uint8_t VCNL4040_PS_AF_ENABLE = (1 << 3);
 
-static const uint8_t VCNL4040_PS_TRIG_MASK = (uint8_t)~((1 << 3));
+static const uint8_t VCNL4040_PS_TRIG_MASK = (uint8_t)~((1 << 2));
 static const uint8_t VCNL4040_PS_TRIG_TRIGGER = (1 << 2);
 
 static const uint8_t VCNL4040_WHITE_EN_MASK = (uint8_t)~((1 << 7));
